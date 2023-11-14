@@ -8,22 +8,19 @@
   <h3 align="center">Openwrt/LEDE 云编译</h3>
 </p>
 
-### 🎯固件默认设置   
-- 路由器地址: `192.168.100.1`   
-- 默认用户名: `root`   
+### 🎯固件默认设置
+- 路由器地址: `192.168.100.1`
+- 默认用户名: `root`
 - 默认密码  : `password`
 
 <br>
 
 ## 固件特性
 
-✨ 自带常用的插件   
-✨ 集成所有openwrt的USB驱动   
-✨ 集成Python3.x(带pip)环境   
-✨ 全新的 [Them](https://github.com/jerrykuku/luci-theme-argon)  
-✨ x86_64 vmdk固件集成vm-tools   
-✨ x86_64 iso格式镜像  
-✨ x86_64 Lite版本(只添加必要插件)  
+✨ 自带常用的插件
+✨ 全新的 [Them](https://github.com/jerrykuku/luci-theme-argon)
+✨ x86_64 iso格式镜像
+✨ x86_64 Lite版本(只添加必要插件)
 
 ## 版权说明
 
@@ -31,12 +28,11 @@
 
 
 ## 项目支持
+- [bigbugcc/OpenWrts](https://github.com/bigbugcc/OpenWrts)
 - [P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)
 - [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)
 - [luci-theme-argon](https://github.com/jerrykuku/luci-theme-argon)
 
-## Stargazers over time
-[![Stargazers over time](https://starchart.cc/bigbugcc/OpenWrts.svg)](https://starchart.cc/bigbugcc/OpenWrts)
 
 <!-- links -->
 [your-project-path]:https://github.com/lengxugz/OpenWrts/
