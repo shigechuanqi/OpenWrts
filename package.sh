@@ -1,6 +1,8 @@
 #!/bin/bash
 git clone  https://github.com/lengxugz/OpenwrtApp package/otherapp/OpenwrtApp
-git clone  https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter
+
+#OpenAppFliter
+#git clone  https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter
 
 # Theme
 # luci-theme-neobird

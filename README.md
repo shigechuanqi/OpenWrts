@@ -1,6 +1,6 @@
 
 
-# Action Openwrt 云自动编译
+# Action Openwrt 云编译
 <br />
 <p align="center">
     <img src="./assets/images/action1.jpg" alt="Logo" width="500" />
@@ -20,7 +20,6 @@
 ✨ 自带常用的插件
 ✨ 全新的 [Them](https://github.com/jerrykuku/luci-theme-argon)
 ✨ x86_64 iso格式镜像
-✨ x86_64 Lite版本(只添加必要插件)
 
 ## 版权说明
 
