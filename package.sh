@@ -5,7 +5,7 @@ git clone  https://github.com/lengxugz/OpenwrtApp package/otherapp/OpenwrtApp
 #git clone  https://github.com/destan19/OpenAppFilter package/otherapp/OpenAppFilter
 
 #eQosPlus
-git clone https://github.com/sirpdboy/luci-app-eqosplus package/otherapp/luci-app-eqosplus
+#git clone https://github.com/sirpdboy/luci-app-eqosplus package/otherapp/luci-app-eqosplus
 
 # Theme
 # luci-theme-neobird
