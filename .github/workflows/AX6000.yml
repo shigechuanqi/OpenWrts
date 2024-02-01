@@ -1,4 +1,4 @@
-name: x86_64
+name: AX6000
 
 on:
   repository_dispatch:
@@ -10,7 +10,7 @@ on:
         default: 'false'
 
 env:
-  OPNAME: 'x86_64'
+  OPNAME: 'AX6000'
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
