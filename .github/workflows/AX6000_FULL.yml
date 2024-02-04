@@ -1,4 +1,4 @@
-name: AX6000
+name: AX6000_FULL
 
 on:
   repository_dispatch:
@@ -10,7 +10,7 @@ on:
         default: 'false'
 
 env:
-  OPNAME: 'AX6000'
+  OPNAME: 'AX6000_FULL'
   REPO_URL: https://github.com/shigechuanqi/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
