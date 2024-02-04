@@ -11,7 +11,7 @@ on:
 
 env:
   OPNAME: 'AX6000'
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/shigechuanqi/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   EXTERNAL_FILE: configs/AX6000_External.config
