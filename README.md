@@ -3,20 +3,29 @@
     本代码在原有X86基础上增加了LEDE对红米AX6000的固件编译
 
 二 与原版LEDE的变化
+
     1.原版LEDE使用大分区,本编译修改为X-WRT的原厂分区模式
-        1.1LEDE原有分区 mtdparts=nmbm0:1024k(bl2),256k(Nvram),256k(Bdata),2048k(factory),2048k(fip),256k(crash),256k(crash_log),112640k(ubi)
-        1.2X-WRT分区 mtdparts=nmbm0:1024k(bl2),256k(Nvram),256k(Bdata),2048k(factory),2048k(fip),256k(crash),256k(crash_log),30720k(ubi),30720k(ubi1),51200k(overlay)
-        1.3修改内容参考 https://github.com/x-wrt/x-wrt/commit/6ef69f9d4a05811acb584b0e8736d91e97a91b5c
+
+        1.1 LEDE原有分区 mtdparts=nmbm0:1024k(bl2),256k(Nvram),256k(Bdata),2048k(factory),2048k(fip),256k(crash),256k(crash_log),112640k(ubi)
+        1.2 X-WRT分区 mtdparts=nmbm0:1024k(bl2),256k(Nvram),256k(Bdata),2048k(factory),2048k(fip),256k(crash),256k(crash_log),30720k(ubi),30720k(ubi1),51200k(overlay)
+        1.3 修改内容参考 (https://github.com/x-wrt/x-wrt/commit/6ef69f9d4a05811acb584b0e8736d91e97a91b5c)
+
     2.新增AdGuardHome插件的直接编译支持
+
     3.新增默认主题luci-theme-neobird
+
     4.登陆IP修改为192.168.100.1 root/password
+
 三 安装使用(方法仅适应于本例)
+
     1.解锁SSH
         可参考(https://www.right.com.cn/forum/thread-8253125-1-1.html)
+
     2.常用命令
         >cat /proc/mtd
         >cat /proc/partitions
         >
+
     3.备份原厂分区
         >dd if=/dev/mtd1 of=/tmp/mtd1_BL2.bin
         >dd if=/dev/mtd2 of=/tmp/mtd2_Nvram.bin
@@ -26,20 +35,26 @@
 
     4.安装方案1 (uboot+sysupgrade.bin) 参考(https://www.right.com.cn/forum/thread-8265832-1-1.html)
       先安装uboot,然后通过uboot直接安装sysupgrade包
+
         4.1下载uboot(https://github.com/hanwckf/bl-mt798x/releases)
             获得 mt7986_redmi_ax6000-fip-fixed-parts-multi-layout.bin 
+
         4.2安装
             >md5sum /tmp/mt7986_redmi_ax6000-fip-fixed-parts-multi-layout.bin 
             >#写入分区FIP
             >mtd write /tmp/mt7986_redmi_ax6000-fip-fixed-parts-multi-layout.bin FIP
             >#验证是否写入成功
             >mtd verify /tmp/mt7986_redmi_ax6000-fip-fixed-parts-multi-layout.bin FIP
+
         4.3启动uboot系统
             拔电关机->捅RESET键(保持)->插电->等15s松RESET键
+
         4.4登陆uboot系统
             登陆IP:192.168.31.1
+
         4.5刷LEDE固件
             在uboot WEB界面选择本例编译的(openwrt-mediatek-filogic-xiaomi_redmi-router-ax6000-squashfs-sysupgrade.bin)进行安装
+
     5.安装方案2 (stock-intramfs-factory+sysupgrade.bin)参考(https://www.right.com.cn/FORUM/thread-8255378-1-1.html)
         5.1下载stock-initramfs-factory.ubi
             https://downloads.x-wrt.com/rom/ 搜索 *xiaomi_redmi-router-ax6000-stock-initramfs-factory.ubi
