@@ -1,4 +1,4 @@
-name: AX6000_FULL
+name: AX6000_STOCK_LEDE
 
 on:
   repository_dispatch:
@@ -10,7 +10,7 @@ on:
         default: 'false'
 
 env:
-  OPNAME: 'AX6000_FULL'
+  OPNAME: 'AX6000_STOCK_LEDE'
   REPO_URL: https://github.com/coolsnowwolf/lede
   UPDATE_SH: src_ax6000/update_ax6000_stock.sh
   REPO_BRANCH: master
