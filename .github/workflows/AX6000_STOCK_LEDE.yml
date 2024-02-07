@@ -64,8 +64,8 @@ jobs:
 
     - name: Modify the STOCK layout to adapt to the original factory
       run: |
-        chmod +x $UPDATE_SH
-        $GITHUB_WORKSPACE/$UPDATE_SH
+        #chmod +x $UPDATE_SH
+        #$GITHUB_WORKSPACE/$UPDATE_SH
         cat $GITHUB_WORKSPACE/openwrt/target/linux/mediatek/dts/mt7986a-xiaomi-redmi-router-ax6000.dts |grep ubi_kernel
         cat $GITHUB_WORKSPACE/openwrt/target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh |grep redmi_ax6000_nand_upgrade_tar
 
