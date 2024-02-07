@@ -61,11 +61,13 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
+        cd openwrt
+        git reset --hard eb3e9ad2e339c0eb841ca435b2746fddbdb4744f
+        
     - name: Modify the STOCK layout to adapt to the original factory
       run: |
-        #chmod +x $UPDATE_SH
-        #$GITHUB_WORKSPACE/$UPDATE_SH
+        chmod +x $UPDATE_SH
+        $GITHUB_WORKSPACE/$UPDATE_SH
         cat $GITHUB_WORKSPACE/openwrt/target/linux/mediatek/dts/mt7986a-xiaomi-redmi-router-ax6000.dts |grep ubi_kernel
         cat $GITHUB_WORKSPACE/openwrt/target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh |grep redmi_ax6000_nand_upgrade_tar
 
