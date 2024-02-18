@@ -45,10 +45,6 @@
 	};
 };
 
-&crypto {
-	status = "okay";
-};
-
 &eth {
 	status = "okay";
 
@@ -204,7 +200,7 @@
 				read-only;
 			};
 
-			partition@600000 {
+            partition@600000 {
 				label = "ubi_kernel";
 				reg = <0x600000 0x1e00000>;
 			};
@@ -291,19 +287,7 @@
 	};
 };
 
-&trng {
-	status = "okay";
-};
-
-&uart0 {
-	status = "okay";
-};
-
-&watchdog {
-	status = "okay";
-};
-
-&wifi {
+&wmac {
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&wf_2g_5g_pins>;
