@@ -11,7 +11,7 @@ on:
 
 env:
   OPNAME: 'AX6000_STOCK_LEDE'
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/shigechuanqi/lede
   UPDATE_SH: src_ax6000/update_ax6000_stock.sh
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
