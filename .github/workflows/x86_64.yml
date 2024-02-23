@@ -76,7 +76,9 @@ jobs:
         $GITHUB_WORKSPACE/$SYS_CONF_SH
 
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
+      run: |
+        cd openwrt && ./scripts/feeds update -a
+        sed -i 's/"admin", "vpn"/"admin", "services目录下"/g' feeds/luci/applications/luci-app-zerotier/luasrc/controller/zerotier.lua
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
